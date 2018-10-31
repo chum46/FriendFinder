@@ -7,7 +7,7 @@ best overall match.
 
 ## Demo
 	
-*Friend Finder* demo: 
+*Friend Finder* demo: https://chum46friendfinder.herokuapp.com/
 
 ## Technologies used
 - Node.js
