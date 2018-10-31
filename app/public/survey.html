@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FriendFinder</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <br><br>
+    <div class="container">
+        <h1>Survey Questions</h1>
+        <hr>
+        <h2>About You</h2>
+        <h4>Name (Required)</h4>
+        <input type="text" id="name" class="form-control" required>
+        <h4>Link to Photo Image (Required)</h4>
+        <input type="text" id="photo" class="form-control" required>
+        <hr>
+        <h2>Question 1</h2>
+        <h4 for="question1">What Disney/Pixar Character are you?</h4>
+        <select id="question1">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Simba</option>
+            <option value="2">Moana</option>
+            <option value="3">Elsa</option>
+            <option value="4">Nemo</option>
+            <option value="5">Buzz Lightyear</option>
+        </select>
+        <h2>Question 2</h2>
+        <h4 for="question2">What superpower do you want most?</h4>
+        <select id="question2">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Flying</option>
+            <option value="2">Invisibility</option>
+            <option value="3">Super Strength</option>
+            <option value="4">Telepathy</option>
+            <option value="5">Shape Shifting</option>
+        </select>
+        <h2>Question 3</h2>
+        <h4 for="question3">What's your favorite season?</h4>
+        <select id="question3">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Winter</option>
+            <option value="2">Spring</option>
+            <option value="3">Summer</option>
+            <option value="4">Fall</option>
+            <option value="5">Don't have one</option>
+        </select>
+        <h2>Question 4</h2>
+        <h4 for="question4">What do you do at parties</h4>
+        <select id="question4">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Find me by the food and drinks</option>
+            <option value="2">Make the playlist</option>
+            <option value="3">Wall Flower</option>
+            <option value="4">Dance and be Merry</option>
+            <option value="5">Meet new people</option>
+        </select>
+        <h2>Question 5</h2>
+        <h4 for="question5">What's your favorite sport?</h4>
+        <select id="question5">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Baseball</option>
+            <option value="2">Basketball</option>
+            <option value="3">none of these choices</option>
+            <option value="4">Soccer</option>
+            <option value="5">Tennis</option>
+        </select>
+        <h2>Question 6</h2>
+        <h4 for="question6">What type of cuisine do you prefer?</h4>
+        <select id="question6">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Thai</option>
+            <option value="2">Mexican</option>
+            <option value="3">Indian</option>
+            <option value="4">Japanese</option>
+            <option value="5">American</option>
+        </select>
+        <h2>Question 7</h2>
+        <h4 for="question7">What do you usually drink with dinner: </h4>
+        <select id="question7">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Wine/Spirits</option>
+            <option value="2">Beer</option>
+            <option value="3">Something Sweet and Carbonated</option>
+            <option value="4">Water</option>
+            <option value="5">Fruit Juices</option>
+        </select>
+        <h2>Question 8</h2>
+        <h4 for="question8">Pick a city:</h4>
+        <select id="question8">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Chicago</option>
+            <option value="2">Los Angeles</option>
+            <option value="3">Miami</option>
+            <option value="4">New York</option>
+            <option value="5">San Francisco</option>
+        </select>
+        <h2>Question 9</h2>
+        <h4 for="question9">Pick a TV Show:</h4>
+        <select id="question9">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Friends</option>
+            <option value="2">How I Met Your Mother</option>
+            <option value="3">The Office</option>
+            <option value="4">Parks and Recreation</option>
+            <option value="5">The Simpsons</option>
+        </select>
+        <h2>Question 10</h2>
+        <h4 for="question10">Choose a cookie:</h4>
+        <select id="question10">
+            <option selected value="0">Select an Option</option>
+            <option value="1">Chocolate Chip</option>
+            <option value="2">Oatmeal Raisin</option>
+            <option value="3">Snickerdoodle</option>
+            <option value="4">Sugar</option>
+            <option value="5">White Chip Macademia Nut</option>
+        </select>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="submit">Submit</button>
+        <br>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/granteric498/FriendFinder">GitHub
+                Repo</a></p>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your best match is: </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="userMatch"></p>
+                    <img id="userMatchImage" width="300" src="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var choicesArray = [];
+        var friendsArray = [];
+
+        $("#submit").on("click", function (event) {
+            event.preventDefault();
+
+            for (let i = 1; i <= 10; i++) {
+                choicesArray.push(parseInt($("#question" + i).val()))
+            };
+
+            $.get("/api/friends/", function (data) {
+                for (i in data) {
+                    for (a in data[i].scores) {
+                        var test = Math.abs(data[i].scores[a] - choicesArray[a]);
+                    };
+                    friendsArray.push(test);
+                };
+
+                console.log(friendsArray);
+
+                for (i in friendsArray) {
+                    if (friendsArray[i] === 0) {
+                        $("#userMatch").html(data[i].name);
+                        $("#userMatchImage").attr("src", data[i].photo);
+                    }
+                }
+            });
+
+            var profile = {
+                name: $("#name").val().trim(),
+                photo: $("#photo").val(),
+                scores: choicesArray,
+            };
+
+            $.post("/api/friends", profile).done(function (data) {
+                // Show the matching friend to the user:
+                $(".modal").show();
+
+                // Reset the form
+                $("#name").val("");
+                $("#photo").val("");
+                $("#question1").val("0");
+                $("#question2").val("0");
+                $("#question3").val("0");
+                $("#question4").val("0");
+                $("#question5").val("0");
+                $("#question6").val("0");
+                $("#question7").val("0");
+                $("#question8").val("0");
+                $("#question9").val("0");
+                $("#question10").val("0");
+                choicesArray = [];
+            });
+        });
+
+        $(".close").on("click", function (event) {
+            $(".modal").hide();
+        });
+    </script>
+
+</body>
+
+</html>
